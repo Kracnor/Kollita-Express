@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Collita Expres</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li class="dropdown">
+                    <a href="index.html">Inicio</a>
+                </li>
+                <li class="dropdown">
+                    <a href="index.html">Productos</a>
+                    <ul class="dropdown-content">
+                        <li><a href="normal.html">Coca Machucada</a></li>
+                        <li><a href="bebidas.html">Bebidas Energizantes</a></li>
+                        <li><a href="potencia.html">Cervezas</a></li>
+                        <li><a href="alcoholica.html">Bebidas Alcohólicas</a></li>
+                        <li><a href="cigarrillos.html">Cigarrillos</a></li>
+                        <li><a href="ofertas.html">Ofertas</a></li>
+                        <li><a href="sabores.html">Coca Con Sabores</a></li>
+                        <!-- Añade más productos según sea necesario -->
+                    </ul> 
+                </li>
+                <li class="dropdown">
+                    <a href="contactos.html">Contacto</a>
+                </li>
+                <li class="dropdown">
+                    <a href="nosotros.html">Sobre Nosotros</a>    
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="banner">
+        <div class="banner-content">
+            <div class="banner-text">
+                <h1>Disfruta de las mejores bebidas Alcohólicas</h1>
+                <p>Encuentra nuestra variedad de sabores y bebidas.</p>
+                
+            </div>
+            <div class="banner-logo">
+                <img src="imagenes/foto.jpg" alt="Logo de La Collita Expres" />
+            </div>
+        </div>
+    </section>
+    <section id="productos">
+        <h2>Nuestras Bebidas Alcohólicas</h2>
+        <div class="productos-grid">
+            <div class="producto">
+                <div class="producto-img-container">
+                    <img src="imagenes/NEGRO.png" alt="Whisky Johnnie Walker Double Black" class="producto-img">
+                    <div class="producto-info">
+                        <h3>JOHNNIE WALKER DOUBLE BLACK</h3>
+                        <p>Refrescante y ligera.</p>
+                        <p><strong>Precio: Bs. 210.00</strong></p>
+                        <button class="boton-carrito" onclick="agregarAlCarrito('JOHNNIE WALKER DOUBLE BLACK', 210)">Añadir al carrito</button>
+                    </div>
+                </div>
+            </div>
+            <div class="producto">
+                <div class="producto-img-container">
+                    <img src="imagenes/redlevel.png" alt="Whisky Johnnie Walker Red Level" class="producto-img">
+                    <div class="producto-info">
+                        <h3>WHISKY JOHNNIE WALKER REDLEVEL</h3>
+                        <p>Con un sabor intenso y robusto.</p>
+                        <p><strong>Precio: Bs. 150.00</strong></p>
+                        <button class="boton-carrito" onclick="agregarAlCarrito('WHISKY JOHNNIE WALKER REDLEVEL', 150)">Añadir al carrito</button>
+                    </div>
+                </div>
+            </div>
+            <div class="producto">
+                <div class="producto-img-container">
+                    <img src="imagenes/vinotinto.png" alt="Vino Tinto" class="producto-img">
+                    <div class="producto-info">
+                        <h3>Vino Tinto</h3>
+                        <p>Perfecto para acompañar tus comidas.</p>
+                        <p><strong>Precio: Bs. 90.00</strong></p>
+                        <button class="boton-carrito" onclick="agregarAlCarrito('Vino Tinto', 90)">Añadir al carrito</button>
+                    </div>
+                </div>
+            </div>
+            <div class="producto">
+                <div class="producto-img-container">
+                    <img src="imagenes/vinoblanco.png" alt="Vino Blanco" class="producto-img">
+                    <div class="producto-info">
+                        <h3>Vino Blanco</h3>
+                        <p>Ligero y afrutado.</p>
+                        <p><strong>Precio: Bs. 85.00</strong></p>
+                        <button class="boton-carrito" onclick="agregarAlCarrito('Vino Blanco', 85)">Añadir al carrito</button>
+                    </div>
+                </div>
+            </div>
+            <div class="producto">
+                <div class="producto-img-container">
+                    <img src="imagenes/ron.png" alt="Ron 'La Recompensa'" class="producto-img">
+                    <div class="producto-info">
+                        <h3>Ron "La Recompensa"</h3>
+                        <p>Ideal para cócteles.</p>
+                        <p><strong>Precio: Bs. 100.00</strong></p>
+                        <button  class="boton-carrito" onclick="agregarAlCarrito('Ron La Recompensa', 100)">Añadir al carrito</button>
+                    </div>
+                </div>
+            </div>
+            <div class="producto">
+                <div class="producto-img-container">
+                    <img src="imagenes/tequila.png" alt="Tequila" class="producto-img">
+                    <div class="producto-info">
+                        <h3>Tequila</h3>
+                        <p>La base de los mejores margaritas.</p>
+                        <p><strong>Precio: Bs. 130.00</strong></p>
+                        <button  class="boton-carrito" onclick="agregarAlCarrito('Tequila', 130)">Añadir al carrito</button>
+                    </div>
+                </div>
+            </div>
+            <div class="producto">
+                <div class="producto-img-container">
+                    <img src="imagenes/wyski.png" alt="Whisky" class="producto-img">
+                    <div class="producto-info">
+                        <h3>Whisky</h3>
+                        <p>Un clásico para los amantes de los destilados.</p>
+                        <p><strong>Precio: Bs. 160.00</strong></p>
+                        <button  class="boton-carrito" onclick="agregarAlCarrito('Whisky', 160)">Añadir al carrito</button>
+                    </div>
+                </div>
+            </div>
+            <div class="producto">
+                <div class="producto-img-container">
+                    <img src="imagenes/vodka.png" alt="Vodka" class="producto-img">
+                    <div class="producto-info">
+                        <h3>Vodka</h3>
+                        <p>Perfecto para mezclar.</p>
+                        <p><strong>Precio: Bs. 120.00</strong></p>
+                        <button class="boton-carrito" onclick="agregarAlCarrito('Vodka', 120)">Añadir al carrito</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+
+    <footer>
+        <div class="contact-info">
+            <p>Teléfono: +591 75558238</p>
+            <p>Dirección: Zona la Cuchilla, Santa Cruz</p>
+        </div>
+        <div class="redes-sociales">
+            <a href="https://www.facebook.com/profile.php?id=100067494434338" target="_blank"><img src="imagenes/icons8-facebook-30.png" alt="Facebook"> Facebook</a>
+            <a href="https://www.instagram.com/coca_machucada_la_kollita/" target="_blank"><img src="imagenes/icons8-instagram-50.png" alt="Instagram"> Instagram</a>
+            <a href="https://www.tiktok.com/@cocamachucadalakollita/" target="_blank"><img src="imagenes/icons8-tiktok-30.png" alt="TikTok"> TikTok</a>
+            <p>&copy; 2024 La Collita Expres. Todos los derechos reservados</p>
+            <div class="qr-code-container">
+                <h3>Contáctanos por WhatsApp</h3>
+                <img src="imagenes/qr.jpg" alt="Código QR de WhatsApp" class="qr-code">
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+        actualizarCarrito();
+
+        function agregarAlCarrito(nombre, precio) {
+            carrito.push({ nombre, precio });
+            guardarCarrito();
+            actualizarCarrito();
+        }
+
+        function actualizarCarrito() {
+            const listaCarrito = document.getElementById('lista-carrito');
+            listaCarrito.innerHTML = ''; // Limpiar la lista antes de actualizar
+
+            let totalCarrito = 0;
+            carrito.forEach(item => {
+                totalCarrito += item.precio;
+                const itemCarrito = document.createElement('div');
+                itemCarrito.textContent = `${item.nombre} - Bs. ${item.precio.toFixed(2)}`;
+                listaCarrito.appendChild(itemCarrito);
+            });
+
+            document.getElementById('total-carrito').textContent = totalCarrito.toFixed(2);
+        }
+
+        function guardarCarrito() {
+            localStorage.setItem('carrito', JSON.stringify(carrito));
+        }
+
+        function finalizarCompra() {
+            if (carrito.length === 0) {
+                alert("El carrito está vacío.");
+            } else {
+                alert(`Compra finalizada. Total a pagar: Bs. ${calcularTotalCarrito().toFixed(2)}`);
+                carrito = [];
+                guardarCarrito();
+                actualizarCarrito();
+            }
+        }
+
+        function calcularTotalCarrito() {
+            return carrito.reduce((total, item) => total + item.precio, 0);
+        }
+    </script>
+
+</body>
+</html>

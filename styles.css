@@ -1,0 +1,686 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #cddadf; /* Color de fondo suave */
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 30px;
+    background-color: #00796b;
+    color: #e4e4e4;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
+    color: #1e1d19;
+}
+
+/* Banner principal */
+.banner {
+    background-color: #dff0d8;
+    text-align: center;
+    padding: 40px 0;
+    background-image: url('imagenes/foto.jpg'); /* Agregar imagen de fondo */
+    background-size: cover; /* Asegurar que la imagen cubra todo el banner */
+    background-position: center; /* Centrar la imagen de fondo */
+    background-blend-mode: overlay; /* Mezclar la imagen con el color de fondo */
+}
+
+.banner-content {
+    display: flex;
+    align-items: center;
+    gap: 3rem; /* Más espacio entre el logo y el texto */
+}
+
+.banner-text {
+    max-width: 50%; /* Hacer el texto más ancho */
+}
+
+.banner h1 {
+    font-size: 3.5rem; /* Hacer el título más grande */
+    margin: 0;
+    color: #030302; /* Color dorado */
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3); /* Sombra suave para el texto */
+}
+
+.banner p {
+    font-size: 1.5rem; /* Aumentar el tamaño del párrafo */
+    line-height: 1.8; /* Mejorar la legibilidad */
+    margin-top: 1rem;
+}
+
+.banner-logo img {
+    width: 300px; /* Hacer la imagen del logo más grande */
+    border: 5px solid #fff; /* Aumentar el borde */
+    border-radius: 15px; /* Bordes más redondeados */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); /* Sombra más pronunciada */
+    transition: transform 0.4s ease; /* Efecto de transformación suave */
+}
+
+.banner-logo img:hover {
+    transform: scale(1.1); /* Efecto de agrandar al pasar el ratón */
+}
+
+/* Sección de productos */
+/* Estilos de la sección de productos */
+.productos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    text-align: center;
+    gap: 20px;
+    padding: 2rem;
+}
+
+.producto {
+    display: flex; /* Flexbox para alinear elementos */
+    flex-direction: column; /* Columna para apilar imagen y texto */
+    justify-content: space-between; /* Espaciado uniforme entre imagen y texto */
+    height: 400px; /* Aumenta la altura total del producto para más espacio */
+    background-color: #0670113c; /* Color de fondo del producto */
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 1rem; /* Espacio interno */
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.producto:hover {
+    transform: translateY(-5px); /* Elevar el producto al pasar el ratón */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Efecto de sombra */
+}
+
+.producto-img {
+    width: 100%; /* Ancho completo */
+    height: auto; /* Altura automática para mantener la proporción */
+    max-height: 200px; /* Altura máxima para la imagen */
+    object-fit: contain; /* Asegura que la imagen no se recorte */
+    border-radius: 5px;
+    margin-bottom: 10px; /* Espacio debajo de la imagen */
+    transition: transform 0.3s ease;
+}
+
+.producto-img:hover {
+    transform: scale(1.1);
+}
+
+.producto h3 {
+    margin: 10px 0; /* Espaciado vertical para el título */
+    font-size: 1.4rem; /* Tamaño de fuente del título */
+    color: #000; /* Color del texto */
+}
+
+.producto p {
+    margin: 0; /* Eliminar margen */
+    font-size: 1.2rem; /* Tamaño de fuente para el texto */
+    color: #000; /* Color del texto */
+    line-height: 1.5; /* Mayor interlineado */
+}
+
+.producto p strong {
+    display: block;
+    font-size: 1.2rem;
+    color: #000;
+    margin-top: 5px;
+    font-weight: bold;
+    background-color: #ffffff99;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.producto:hover p strong {
+    transform: scale(1.1); /* Aumenta el tamaño al pasar el mouse */
+    background-color: #ffe9e8; /* Cambia de color al pasar el mouse */
+}
+
+/* Estilo para el contenedor del total a pagar */
+.total-container {
+    background-color: #00796b;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    margin: 20px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.total-container p {
+    font-size: 1.5rem; /* Tamaño de fuente */
+    margin: 0; /* Sin margen */
+    font-weight: bold; /* Negrita */
+    letter-spacing: 1px; /* Espaciado de letras */
+}
+
+.total-container:hover {
+    background-color: #004d40; /* Color de fondo al pasar el mouse */
+    transform: translateY(-3px); 
+}
+
+.total-container small {
+    display: block; /* Mostrar información adicional en bloque */
+    font-size: 0.9rem; /* Tamaño de fuente más pequeño */
+    margin-top: 10px; /* Espaciado superior */
+    color: rgba(255, 255, 255, 0.8); /* Color blanco con opacidad */
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    background-color: #fff; /* Fondo blanco */
+    margin: 10% auto; /* Margen superior y centrado horizontalmente */
+    padding: 30px; /* Aumento del espaciado interno */
+    border-radius: 10px; /* Bordes más redondeados */
+    width: 90%; /* Ancho más adaptable */
+    max-width: 600px; /* Ancho máximo */
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3); /* Sombra más profunda */
+    animation: fadeIn 0.3s; /* Animación de aparición */
+    overflow-y: auto; /* Permitir desplazamiento vertical */
+    max-height: 80vh; /* Altura máxima del modal */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Comienza invisible */
+        transform: translateY(-10px); /* Se desliza hacia abajo */
+    }
+    to {
+        opacity: 1; /* Termina visible */
+        transform: translateY(0); /* Posición normal */
+    }
+}
+
+.close {
+    color: #aaa; /* Color del botón de cerrar */
+    float: right; /* Alineación a la derecha */
+    font-size: 28px; /* Tamaño del texto */
+    font-weight: bold; /* Negrita */
+    transition: color 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #e74c3c; /* Color más vibrante al pasar el mouse */
+    text-decoration: none; /* Sin subrayado */
+    cursor: pointer;
+}
+
+.modal-title {
+    color: #4CAF50; /* Color del título */
+    margin: 0; /* Sin margen en el título */
+    font-size: 1.8rem; /* Tamaño de fuente del título */
+}
+
+.modal-thank-you,
+.modal-total,
+.modal-details {
+    font-size: 1.1rem; /* Tamaño de fuente para otros textos */
+    margin: 10px 0; /* Espaciado vertical */
+}
+
+.total-amount {
+    color: #e74c3c; /* Color para el total a pagar */
+    font-weight: bold; /* Negrita */
+}
+
+.purchase-details {
+    margin: 10px 0; /* Espaciado vertical */
+}
+
+.qr-payment-container {
+    margin: 10px 0; /* Espaciado vertical */
+    text-align: center; /* Centrar el contenido */
+}
+
+.qr-code {
+    width: 120px; /* Tamaño del código QR */
+    height: 120px; /* Tamaño del código QR */
+}
+
+.qr-instruction {
+    font-size: 0.9rem; /* Tamaño del texto de instrucciones */
+    margin-top: 5px; /* Espaciado superior */
+}
+
+.modal-close-button {
+    background-color: #00796b; /* Color del botón */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    padding: 10px 15px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cursor en forma de mano */
+    transition: background-color 0.3s; /* Transición suave para el color */
+}
+
+.modal-close-button:hover {
+    background-color: #004d40; /* Color más oscuro al pasar el mouse */
+}
+
+.carrito {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.carrito img {
+    width: 40px;
+    height: auto;
+}
+
+.carrito-list {
+    position: fixed;
+    top: 80px;
+    right: 20px;
+    width: 300px;
+    background: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    padding: 20px;
+    display: none;
+    max-height: 400px; /* Altura máxima para el carrito */
+    overflow-y: auto; /* Permitir desplazamiento vertical */
+}
+
+.carrito-list h2 {
+    margin: 0 0 10px;
+}
+
+.carrito-list div {
+    margin-bottom: 5px;
+}
+
+.carrito-list p {
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+#boton-finalizar {
+    background-color: #00796b; /* Color del botón */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    padding: 10px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cursor en forma de mano */
+    width: 100%; /* Ancho completo */
+    transition: background-color 0.3s; /* Transición para el color */
+}
+
+#boton-finalizar:hover {
+    background-color: #004d40; /* Color más oscuro al pasar el mouse */
+}
+
+/* Pie de página */
+footer {
+    background-color: #004d40;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    position: relative;
+    padding-bottom: 120px; /* Espacio para el QR */
+}
+
+footer .contact-info p {
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+}
+
+.redes-sociales a {
+    color: #ffd54f;
+    margin: 0 0.5rem;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    transition: color 0.3s ease;
+}
+
+.redes-sociales a img {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    filter: invert(100%);
+    transition: transform 0.3s;
+}
+
+.redes-sociales a:hover {
+    color: #ffffff;
+}
+
+.redes-sociales a:hover img {
+    transform: scale(1.1);
+}
+
+.qr-code-container {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    text-align: center;
+    background-color: #004d40;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.qr-code-container h3 {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.qr-code {
+    width: 140px;
+    height: auto;
+    margin-top: 5px;
+}
+
+
+
+
+/* Sección Sobre Nosotros */
+#sobre-nosotros {
+    padding: 3rem; /* Espacio interno ajustado */
+    background-color: #ffffff; /* Fondo blanco para resaltar el contenido */
+    color: #333; /* Color de texto estándar */
+    text-align: center; /* Centrar el texto */
+    border-radius: 10px; /* Bordes más redondeados */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Sombra más suave */
+    margin: 2rem 0; /* Margen vertical ajustado */
+}
+
+#sobre-nosotros h2 {
+    color: #00796b; /* Color del encabezado */
+    margin-bottom: 1rem; /* Espacio inferior */
+    font-size: 2.2rem; /* Tamaño de fuente ajustado */
+    font-weight: bold; /* Negrita para mayor énfasis */
+    text-transform: uppercase; /* Mayúsculas para un aspecto más fuerte */
+    letter-spacing: 0.5px; /* Espaciado de letras ajustado */
+}
+
+#sobre-nosotros p {
+    font-size: 1.2rem; /* Tamaño de fuente reducido para mayor legibilidad */
+    line-height: 1.6; /* Interlineado ajustado */
+    max-width: 800px; /* Ancho máximo del párrafo */
+    margin: 0 auto 1.5rem auto; /* Centrando y ajustando margen */
+    color: #555; /* Color del texto del párrafo */
+    padding: 0 10px; /* Espaciado lateral ajustado */
+}
+
+
+
+
+/* Estilo para los miembros del equipo */
+#equipo {
+    padding: 3rem; /* Espacio alrededor de la sección ajustado */
+    background-color: #f0f4f4; /* Color de fondo suave */
+    text-align: center; /* Centrar texto */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    margin: 2rem 0; /* Margen vertical ajustado */
+}
+
+#equipo h2 {
+    color: #00796b; /* Color del encabezado */
+    font-size: 2.5rem; /* Tamaño de fuente ajustado */
+    margin-bottom: 1.5rem; /* Espacio inferior */
+}
+
+.equipo-grid {
+    display: grid; /* Usar cuadrícula para disposición */
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Responsivo */
+    gap: 1.5rem; /* Espacio entre miembros ajustado */
+}
+
+.miembro {
+    background-color: #ffffff; /* Fondo blanco para los bloques de miembros */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); /* Sombra suave */
+    padding: 1.5rem; /* Espacio interno ajustado */
+    transition: transform 0.3s ease; /* Transición suave al pasar el ratón */
+}
+
+/* Estilo para los miembros del equipo */
+.miembro img {
+    width: 150px; /* Establecer un ancho fijo para todas las imágenes */
+    height: 150px; /* Establecer un alto fijo para todas las imágenes */
+    object-fit: cover; /* Asegura que la imagen cubra el área sin distorsionarse */
+    border-radius: 50%; /* Hacer la imagen circular */
+    margin-bottom: 1rem; /* Espacio inferior */
+}
+
+
+.miembro h3 {
+    color: #00796b; /* Color del nombre del miembro */
+    font-size: 1.5rem; /* Tamaño de fuente ajustado */
+    margin: 0.5rem 0; /* Espacio vertical */
+}
+
+.miembro p {
+    font-size: 1rem; /* Tamaño de fuente para el texto ajustado */
+    color: #555; /* Color del texto */
+    line-height: 1.4; /* Interlineado ajustado */
+}
+
+/* Efecto de hover para cada miembro */
+.miembro:hover {
+    transform: translateY(-3px); /* Deslizar hacia arriba al pasar el ratón */
+}
+
+
+
+
+
+/* Adaptación para dispositivos móviles */
+@media (max-width: 768px) {
+    .banner h1 {
+        font-size: 2.5rem;
+    }
+
+    .banner-content {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .banner-logo img {
+        width: 250px;
+    }
+
+    .producto {
+        padding: 1rem;
+    }
+
+    .productos-grid {
+        grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+    }
+
+    #sobre-nosotros h2 {
+        font-size: 2rem;
+    }
+
+    #sobre-nosotros p {
+        font-size: 1.2rem;
+    }
+}
+
+/* (esto es la lista de los producto en la parte de arriba)*/
+.dropdown {
+    position: relative;
+    display: inline-block;
+    font-family: 'Arial', sans-serif;
+    background-color: #00796b; /* Color del botón desplegable */
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Estilos para los enlaces del botón desplegable */
+.dropdown a {
+    color: floralwhite; /* Color del texto del botón */
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold; /* Negrita para mayor visibilidad */
+}
+
+/* Cambio de color al pasar el ratón sobre el botón */
+.dropdown:hover {
+    background-color: #00695c; /* Color más oscuro al pasar el ratón */
+}
+
+/* Contenedor del menú desplegable */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #00695c; /* Fondo del menú */
+    min-width: 180px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    overflow: hidden;
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    transform: translateY(10px); /* Añade una animación de deslizamiento */
+    z-index: 1;
+}
+
+/* Estilos de los enlaces dentro del menú desplegable */
+.dropdown-content a {
+    color: #00796b; /* Color del texto de las opciones del menú */
+    padding: 14px 20px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-weight: normal; /* Texto normal para las opciones */
+}
+
+/* Efecto al pasar el ratón sobre los enlaces */
+.dropdown-content a:hover {
+    background-color: #d8dbdbbe; /* Color suave al pasar el ratón */
+    color: #ffffff; /* Color del texto al pasar el ratón */
+    border-left: 4px solid #00796b; /* Resaltar con borde */
+}
+
+/* Mostrar el menú desplegable al pasar el ratón */
+.dropdown:hover .dropdown-content {
+    display: block;
+    opacity: 1;
+    transform: translateY(0); /* Desliza el menú hacia arriba */
+}
+
+/* Cambiar el color del enlace del botón al pasar el ratón */
+.dropdown:hover a {
+    color: #ebf3f2be; /* Mantener el texto en blanco al pasar el ratón */
+}
+
+/* Sombra suave al pasar el ratón sobre los productos */
+.dropdown-content a:hover {
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #504141; /* Color de fondo suave al hacer hover */
+}
+
+/* Ajustes responsivos para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .dropdown {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .dropdown a {
+        padding: 8px 15px;
+        font-size: 1.2rem;
+        display: block; /* Cada enlace ocupa una línea completa */
+        width: 100%; /* Para que el enlace abarque todo el ancho del menú */
+        text-align: left;
+    }
+}
+
+
+/*Para el boton del carrito*/
+
+.boton-carrito {
+    background-color: #4CAF50; /* Color de fondo verde */
+    color: white; /* Color del texto */
+    padding: 12px 20px; /* Espaciado interno */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 1rem; /* Tamaño del texto */
+    cursor: pointer; /* Cambiar el cursor a mano */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transición suave */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
+    display: inline-block; /* Asegura que se mantenga alineado */
+}
+
+.boton-carrito:hover {
+    background-color: #388E3C; /* Color más oscuro al pasar el mouse */
+    transform: scale(1.05); /* Pequeño efecto de crecimiento */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Sombra más fuerte */
+}
+
+.boton-carrito:active {
+    transform: scale(0.98); /* Pequeño efecto de "presionado" al hacer clic */
+}
+
+
+
+
+.producto select {
+    background-color: #f1f1f1; /* Color de fondo del select */
+    color: #333; /* Color del texto */
+    padding: 10px 15px; /* Espaciado interno */
+    font-size: 1rem; /* Tamaño del texto */
+    border: 1px solid #ccc; /* Borde del select */
+    border-radius: 5px; /* Bordes redondeados */
+    appearance: none; /* Ocultar la flecha predeterminada */
+    cursor: pointer; /* Cambiar el cursor al pasar sobre el select */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
+    width: 100%; /* Que ocupe el 100% del ancho disponible */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+.producto select:hover {
+    background-color: #eaeaea; /* Cambiar el fondo al pasar el mouse */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+}
+
+.producto select:focus {
+    outline: none; /* Eliminar el borde azul cuando se selecciona */
+    box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.3); /* Añadir un borde de enfoque verde */
+}
+
+.producto option {
+    background-color: #fff; /* Fondo de las opciones */
+    color: #333; /* Color del texto de las opciones */
+    padding: 10px; /* Espaciado de las opciones */
+}

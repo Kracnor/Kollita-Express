@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Collita Expres</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li class="dropdown">
+                    <a href="index.html">Inicio</a>
+                </li>
+                <li class="dropdown">
+                    <a href="index.html">Productos</a>
+                    <ul class="dropdown-content">
+                        <li><a href="normal.html">Coca Machucada</a></li>
+                        <li><a href="bebidas.html">Bebidas Energizantes</a></li>
+                        <li><a href="potencia.html">Cervezas</a></li>
+                        <li><a href="alcoholica.html">Bebidas Alcohólicas</a></li>
+                        <li><a href="cigarrillos.html">Cigarrillos</a></li>
+                        <li><a href="ofertas.html">Ofertas</a></li>
+                        <li><a href="sabores.html">Coca Con Sabores</a></li>
+                        <!-- Añade más productos según sea necesario -->
+                    </ul> 
+                </li>
+                <li class="dropdown">
+                    <a href="contactos.html">Contacto</a>
+                </li>
+                <li class="dropdown">
+                    <a href="nosotros.html">Sobre Nosotros</a>    
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="banner">
+        <div class="banner-content">
+            <div class="banner-text">
+                <h1>Disfruta de las mejores oferta de la ciudad
+                <p>Encuentra nuestra variedad de sabores y bebidas.</p>
+                
+            </div>
+            <div class="banner-logo">
+                <img src="imagenes/foto.jpg" alt="Logo de La Collita Expres" />
+            </div>
+        </div>
+    </section>
+
+    <section id="productos">
+        <h2>Ofertas Especiales</h2>
+        <div class="productos-grid">
+            <div class="producto">
+                <img src="imagenes/coca_-_cola.png" alt="Bebida Rockstar" class="producto-img">
+                <h3>Pack de Coca</h3>
+                <p>Compra 6 botellas y recibe 1 gratis.</p>
+                <p><strong>Precio: Bs.30</strong></p>
+                <button class="boton-carrito" onclick="agregarAlCarrito('Pack De Coca Cola', 30)">Añadir al carrito</button>
+            </div>
+            <div class="producto">
+                <img src="imagenes/2x1.png" alt="Bebida Rockstar" class="producto-img">
+                <h3>Bebidas Energizantes</h3>
+                <p>2x1 en las bebidas energizantes Ciclon cada Viernes.</p>
+                <p><strong>Precio: Bs.6</strong></p>
+                <button class="boton-carrito" onclick="agregarAlCarrito('2x1 Ciclon', 6)">Añadir al carrito</button>
+            </div>
+            <div class="producto">
+                <img src="imagenes/cigarro.png" alt="Bebida Rockstar" class="producto-img">
+                <h3>Cigarrillos Combo</h3>
+                <p>Compra 3 paquetes y obtén uno gratis.</p>
+                <p><strong>Precio: Bs.60</strong></p>
+                <button class="boton-carrito" onclick="agregarAlCarrito('Cigarro Combo', 60)">Añadir al carrito</button>
+            </div>
+            <div class="producto">
+                <img src="imagenes/coca.jpg" alt="Bebida Rockstar" class="producto-img">
+                <h3>Coca de Sabores</h3>
+                <p>10% de descuento en la compra de 4.</p>
+                <p><strong>Precio: Bs.30</strong></p>
+                <button class="boton-carrito" onclick="agregarAlCarrito('Descuento de Coca ', 30)">Añadir al carrito</button>
+            </div>
+            <div class="producto">
+                <img src="imagenes/acuarius.png" alt="Bebida Rockstar" class="producto-img">
+                <h3>Bebida Acuarius</h3>
+                <p>Ofertas especiales en refrescos: 3x2.</p>
+                <p><strong>Precio: Bs.20</strong></p>
+                <button class="boton-carrito" onclick="agregarAlCarrito('Oferta Acuarius', 20)">Añadir al carrito</button>
+            </div>
+            <div class="producto">
+                <img src="imagenes/2x1.png" alt="Bebida Rockstar" class="producto-img">
+                <h3>Combo Energizante</h3>
+                <p>Compra un energizante y recibe un snack gratis.</p>
+                <p><strong>Precio: Bs.20</strong></p>
+                <button class="boton-carrito" onclick="agregarAlCarrito('Combo Energizante', 8)">Añadir al carrito</button>
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+        <div class="contact-info">
+            <p>Teléfono: +591 75558238</p>
+            <p>Dirección: Zona la Cuchilla, Santa Cruz</p>
+        </div>
+        <div class="redes-sociales">
+            <div class="redes-sociales">
+                <a href="https://www.facebook.com/profile.php?id=100067494434338" target="_blank"><img src="imagenes/icons8-facebook-30.png" alt="Facebook"> Facebook</a>
+                <a href="https://www.instagram.com/coca_machucada_la_kollita/" target="_blank"><img src="imagenes/icons8-instagram-50.png" alt="Instagram"> Instagram</a>
+                <a href="https://www.tiktok.com/@cocamachucadalakollita/" target="_blank"><img src="imagenes/icons8-tiktok-30.png" alt="TikTok"> TikTok</a>
+                <p>&copy; 2024 La Collita Expres. Todos los derechos reservados</p>
+                <div class="qr-code-container">
+                    <h3>Contáctanos por WhatsApp</h3>
+                    <img src="imagenes/qr.jpg" alt="Código QR de WhatsApp" class="qr-code">
+                </div>
+            </div>
+    </footer>
+
+    <script>
+        let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+        actualizarCarrito();
+
+        function agregarAlCarrito(nombre, precio) {
+            carrito.push({ nombre, precio });
+            guardarCarrito();
+            actualizarCarrito();
+        }
+
+        function actualizarCarrito() {
+            const listaCarrito = document.getElementById('lista-carrito');
+            listaCarrito.innerHTML = ''; // Limpiar la lista antes de actualizar
+
+            let totalCarrito = 0;
+            carrito.forEach(item => {
+                totalCarrito += item.precio;
+                const itemCarrito = document.createElement('div');
+                itemCarrito.textContent = `${item.nombre} - Bs. ${item.precio.toFixed(2)}`;
+                listaCarrito.appendChild(itemCarrito);
+            });
+
+            document.getElementById('total-carrito').textContent = totalCarrito.toFixed(2);
+        }
+
+        function guardarCarrito() {
+            localStorage.setItem('carrito', JSON.stringify(carrito));
+        }
+
+        function finalizarCompra() {
+            if (carrito.length === 0) {
+                alert("El carrito está vacío.");
+            } else {
+                alert(`Compra finalizada. Total a pagar: Bs. ${calcularTotalCarrito().toFixed(2)}`);
+                carrito = [];
+                guardarCarrito();
+                actualizarCarrito();
+            }
+        }
+
+        function calcularTotalCarrito() {
+            return carrito.reduce((total, item) => total + item.precio, 0);
+        }
+    </script>
+
+</body>
+</html>
